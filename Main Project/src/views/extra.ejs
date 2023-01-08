@@ -1,0 +1,51 @@
+<%- include('header') -%>
+<div class="container">
+  <div class="sub-container">
+    <h2 class="header" style="color: white">Extra</h2>
+    <div class="parameters-box">
+      <div>
+        <h3 style="text-align: center">Parameters</h3>
+        <p>
+          This is where you can create the name yourself and verify if it
+          matches the challenge and also validate with the governement database!
+          Remember that the name needs to follow these 4 hints:
+        </p>
+        <ul>
+          <li>Contains 4 vowels</li>
+          <li>Starts with “Ma”</li>
+          <li>Has 4 syllabes</li>
+          <li>One of the syllabes is “di”</li>
+        </ul>
+        <span>Tips: <br /></span>
+        <span>
+          - Keeping only 'd', 'l', 'm' and 'n' as consonants might be a good
+          choice.<br
+        /></span>
+        <span>
+          - Keeping only between 7 and 9 letters are usually better. Maximum
+          length is 11. <br
+        /></span>
+        <form class="form" action="/extra-results" method="post">
+          <div class="input-box" style="justify-content: center">
+            <!-- <label for="input-box">Name</label> -->
+            <input
+              class="form-control"
+              id="boxInput"
+              name="nameExtra"
+              type="text"
+              maxlength="11"
+              placeholder="Insert the name here"
+              required
+            />
+          </div>
+          <div class="btn-box">
+            <button type="submit" class="btn btn-outline-success">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('footer') -%>

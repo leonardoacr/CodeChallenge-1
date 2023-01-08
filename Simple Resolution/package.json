@@ -1,0 +1,14 @@
+{
+  "name": "simple-resolution",
+  "version": "1.0.0",
+  "description": "",
+  "main": "simpleResolution.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leonardo R",
+  "license": "ISC",
+  "dependencies": {
+    "stress-pt": "^0.1.0"
+  }
+}

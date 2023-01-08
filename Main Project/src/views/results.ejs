@@ -1,0 +1,22 @@
+<%- include('header') -%>
+<div class="container">
+  <div class="sub-container">
+    <h1 class="header" style="color: white">TruckUp Challenge</h1>
+    <div class="parameters-box">
+      <div>
+        <h2 style="text-align: center">Results</h2>
+        <p>Generated names:</p>
+        <div class="generatedNames-box">
+          <div id="generatedNames"><%- htmlDisplay(generatedNames) %></div>
+        </div>
+        <br />
+        <p>
+          According to IBGE (Brazilian Institute of Geography and Statistics)
+          <%- textStringText %>
+        </p>
+        <p id="generatedNames"><%- htmlDisplay(textStringResults) %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('footer') -%>

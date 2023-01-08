@@ -1,0 +1,95 @@
+<%- include('header') -%>
+<!-- <h1>Truck Up Challenge</h1> -->
+<div class="container">
+  <div class="sub-container">
+    <h2 class="header" style="color: white">Brazilian Names Generator</h2>
+    <div class="parameters-box">
+      <div>
+        <h3 style="text-align: center">Parameters</h3>
+        <p>
+          This generator will create a random Brazilian name with these 4 hints:
+        </p>
+        <ul>
+          <li>Contains 4 vowels</li>
+          <li>Starts with “Ma”</li>
+          <li>Has 4 syllabes</li>
+          <li>One of the syllabes is “di”</li>
+        </ul>
+        <span>Tips: <br /></span>
+        <span>
+          - Deleting some consonants can help you to get a better result faster!
+          Keeping only 'd', 'l', 'm' and 'n' might be a good choice.<br
+        /></span>
+        <span>
+          - Keeping only between 7 and 9 letters are usually better. <br
+        /></span>
+        <span>
+          - Don't expect the page to load quickly if you choose a lot of names!
+          Keep below 100 names to a faster result.</span
+        >
+        <br />
+        <br />
+        <p>Select the consonants that you don't want to consider:</p>
+        <form class="form" action="/results" method="post">
+          <div id="consonants"></div>
+          <div class="input-box">
+            <label for="input-box">Name Length</label>
+            <input
+              class="form-control"
+              id="boxInput"
+              name="nameLength"
+              type="number"
+              min="6"
+              max="11"
+              placeholder="6 &le; Length &le; 11"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <label for="input-box">Names Quantity</label>
+            <input
+              class="form-control"
+              id="boxInput"
+              name="namesQty"
+              type="number"
+              min="1"
+              max="1000"
+              placeholder="1 &le; Qty. &le; 1000"
+              required
+            />
+          </div>
+          <div class="btn-box">
+            <button
+              id="submitForm"
+              type="submit"
+              class="btn btn-outline-success"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+      <div style="width: 100%; text-align: center; margin-top: 1rem">
+        <p id="processingData"></p>
+        <div id="loadingImage"></div>
+      </div>
+    </div>
+    <div class="extra">
+      <h1 class="header" style="color: white">Extra</h1>
+      <div class="parameters-box">
+        <span
+          >Wanna try out creating a name yourself? Click this button to go to a
+          page where you can create a name and validate according to the
+          challenge and the governement database.</span
+        >
+        <form class="form" action="/extra" method="post">
+          <div class="btn-box">
+            <button type="submit" class="btn btn-outline-warning">Go</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('footer') -%>
