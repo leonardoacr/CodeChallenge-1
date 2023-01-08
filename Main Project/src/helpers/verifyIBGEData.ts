@@ -57,7 +57,12 @@ export const verifyIBGE = async (generateNames: string[]) => {
       `Still working on it... One more name saved: [${k + 1}] Found names: ${j}`
     );
     // Send a POST request to the /processing route with the data
-    axios.post('http://localhost:3000/processing', { index: k + 1, count: j });
+    // local hosting:
+    // axios.post('http://localhost:3000/processing', { index: k + 1, count: j });
+
+    // render hosting:
+    axios.post('https://codechallenge-1.onrender.com/processing', { index: k + 1, count: j });
+
   }
   return { namesThatExist, peopleQtyWithTheName };
 };

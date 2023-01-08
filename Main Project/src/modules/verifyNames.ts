@@ -2,7 +2,9 @@
 const { syllable } = require('stress-pt');
 
 export const validateNames = (names: string[]) => {
-  const formattedNames = names.map((name) => name.toLowerCase().replace(/[^a-z]/g, ''));
+  const formattedNames = names.map((name) =>
+    name.toLowerCase().replace(/[^a-z]/g, '')
+  );
   const specialCharacters = formattedNames.some((name) => /[^a-z]/.test(name));
 
   if (specialCharacters) {

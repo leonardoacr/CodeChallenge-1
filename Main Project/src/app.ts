@@ -17,22 +17,15 @@ app.locals.htmlDisplay = (html: string) =>
 //enable express to parse URL-encoded body i.e. info from HTML form
 app.use(express.urlencoded({ extended: true }));
 
-// require node:path to replace \ to / into dirname
-// import path from 'path';
-
-// Taking __dirname and turning to string so we can change /public directory
-// const pathDIR = __dirname;
-// const formatDIR = pathDIR.split(path.sep).join('/');
-// const viewsPath = formatDIR.replace('dist', 'dist/views');
-// const publicPath = formatDIR.replace('dist', 'dist/public');
-
-// console.log("Views Path check: " + viewsPath)
-// console.log('Public Path check: ' + publicPath);
 // setting up EJS
-// app.set('views', viewsPath);
+// for deployment in Render.com:
 app.set('views', ['./dist/views/']);
 app.set('view engine', 'ejs'); // setting up EJS
 app.use(express.static('./dist/public')); // define public and static folder (js and css files)
+
+// for local development:
+// app.set('view engine', 'ejs'); // setting up EJS
+// app.use(express.static('public')); // define public and static folder (js and css files)
 
 // routes
 app.use(mainRoutes);
