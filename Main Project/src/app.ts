@@ -30,7 +30,7 @@ app.use(express.urlencoded({ extended: true }));
 // console.log('Public Path check: ' + publicPath);
 // setting up EJS
 // app.set('views', viewsPath);
-// app.set('views', ['./../views/week-days', './../views']);
+app.set('views', ['./dist/views/']);
 app.set('view engine', 'ejs'); // setting up EJS
 app.use(express.static('public')); // define public and static folder (js and css files)
 
