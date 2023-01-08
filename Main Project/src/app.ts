@@ -32,7 +32,7 @@ app.use(express.urlencoded({ extended: true }));
 // app.set('views', viewsPath);
 app.set('views', ['./dist/views/']);
 app.set('view engine', 'ejs'); // setting up EJS
-app.use(express.static('public')); // define public and static folder (js and css files)
+app.use(express.static('./dist/public')); // define public and static folder (js and css files)
 
 // routes
 app.use(mainRoutes);
